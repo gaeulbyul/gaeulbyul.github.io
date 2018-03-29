@@ -1,0 +1,25 @@
+---
+layout: default
+---
+
+<div class="home">
+  <h1 class="page-heading">Posts</h1>
+  <div class="post-list">
+    {% for post in site.posts %}
+      <div class="post-item">
+        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
+          {{ post.title }}
+        </a>
+        <div class="post-meta">
+          {{ post.date | date: "%Y-%m-%d" }}
+          {% comment %}
+          {% for tag in post.tags %}
+            <span class="post-tag">#{{ tag }}</span>
+          {% endfor %}
+          {% endcomment %}
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+  <p class="rss-subscribe"><a href="{{ "/feed.xml" | prepend: site.baseurl }}">RSS</a></p>
+</div>

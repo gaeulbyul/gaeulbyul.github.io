@@ -1,0 +1,174 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+@charset 'utf-8';
+
+@import 'normalize';
+@import 'syntax';
+
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'noto sans kr', sans-serif;
+  font-size: 20px;
+  background-color: #0A0119;
+  color: #EFE7FE;
+  overflow-y: scroll;
+}
+
+a {
+  color: #AE83FA;
+}
+
+a:hover {
+  color: #CFB6FC;
+}
+
+hr {
+  border-top: 1px solid;
+  border-left: 0;
+  border-right: 0;
+  border-bottom: 0;
+}
+
+code, kbd,
+.rouge-table pre {
+  font-family: 'hack', 'consolas', 'd2coding', monospace;
+}
+
+.site-header {
+  padding: 15px;
+  text-align: center;
+}
+
+.site-title {
+  font-size: 1.5em;
+}
+
+.site-header,
+.site-footer,
+.page-content {
+  max-width: 750px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.post-header {
+  padding-bottom: 15px;
+  border-bottom: 1px solid #4307AB;
+}
+
+.post-header .post-meta {
+  // text-align: right;
+}
+
+.page-content {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  padding: 0 15px;
+}
+
+.post-content {
+  line-height: 1.5;
+
+  hr {
+    border-top: 1px dashed #4307AB;
+  }
+
+  p code,p kbd {
+    padding: 0 .25em;
+    border-radius: 5px;
+    background-color: #1D0349;
+    color: #FFF;
+  }
+
+  em, i {
+    font-style: normal;
+    font-weight: bold;
+  }
+
+  strong, b {
+    padding: 0 3px;
+    border-radius: 5px;
+    font-weight: bolder;
+    background-color: #30057A;
+    color: #fff;
+  }
+
+  blockquote {
+    color: #DFCEFD;
+  }
+
+  blockquote:before {
+    content: '\275D';
+    position: relative;
+    float: left;
+    top: -5px;
+    left: -5px;
+    font-size: 24px;
+  }
+}
+
+.post-content .highlight {
+  margin: 0;
+  padding: 5px 5px;
+  border-radius: 5px;
+  // background-color: inherit;
+  background-color: #130231;
+  overflow-x: auto;
+  // word-wrap: break-word;
+}
+
+.post-content table:not(.rouge-table) {
+  margin: 1em 0;
+  width: 100%;
+  border-collapse: collapse;
+
+  th {
+    border-bottom: 2px solid #4307AB;
+  }
+
+  th, td {
+    padding: 0.25em 1em;
+  }
+
+  tr:nth-child(even) {
+    background-color: #130231;
+  }
+}
+
+.rouge-gutter.gl {
+  border-right: 1px dotted #4307AB;
+  background-color: inherit;
+  color: inherit;
+}
+
+.post-item {
+  padding: 10px 0;
+  font-size: 1.25em;
+}
+
+.post-item .post-meta {
+  margin: 5px 0;
+  font-size: .75em;
+}
+
+.post-endof-content {
+  border-top: 1px solid #4307AB;
+}
+
+.post-tags {
+  padding: 10px 0;
+}
+
+.post-tag {
+  margin: 0 0.25em;
+}
+
+.page-not-found {
+  text-align: center;
+}

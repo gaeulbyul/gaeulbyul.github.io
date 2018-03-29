@@ -1,0 +1,9 @@
+# based on https://www.gitignore.io/api/jekyll
+.jekyll-metadata
+.sass-cache/
+_site/
+
+_drafts/
+_ignore/
+Makefile
+justfile

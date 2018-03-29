@@ -1,0 +1,39 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+title: 'Untitled'
+baseurl: '' # the subpath of your site, e.g. /blog
+url: 'https://gaeulbyul.github.io' # the base hostname & protocol for your site
+
+# Build settings
+permalink: none
+markdown: kramdown
+
+# kramdown:
+#   input: GFM
+#   syntax_highlighter: rouge
+#   syntax_highlighter_opts:
+#     block:
+#       line_numbers: true
+#       start_line: 1
+
+# tag support
+# see: http://tech.kakao.com/2016/07/07/tech-blog-story/
+collections:
+  tags:
+    output: yes
+    permalink: /tags/:path/
+
+defaults:
+- scope:
+    path: ''
+    type: 'tags'
+  values:
+    layout: tags
+
+

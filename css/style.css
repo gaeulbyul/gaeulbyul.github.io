@@ -1,0 +1,378 @@
+@charset 'utf-8';
+
+*, *:before, *:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+::selection {
+    background-color: #9cf;
+}
+
+::-moz-selection {
+    background-color: #9cf;
+}
+
+/*
+html, body, button, input, select, textarea, div, span, p {
+    font-family:
+        'SpoqaHanSans',
+        'Noto Sans CJK KR',
+        'NanumBarunGothic',
+        'NanumGothic',
+        'WooriDotum',
+        'Malgun Gothic',
+        sans-serif;
+}
+*/
+
+body {
+    background-color: #fff;
+}
+
+a, a:visited {
+    /* color: #000; */
+    color: inherit;
+    -webkit-transition: color .2s ease-in;
+    -moz-transition: color .2s ease-in;
+    transition: color .2s ease-in;
+}
+
+a:hover {
+    color: #09f;
+}
+
+a.uh,
+a.uh:visited {
+    text-decoration: none;
+}
+
+a.uh:hover {
+    text-decoration: underline;
+}
+
+hr {
+    border-style: solid;
+    border-top: 1px solid;
+    border-bottom: 0;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.top-header {
+    padding: 5px 0;
+    text-align: center;
+}
+
+.top-header a {
+    font-size: 16pt;
+    font-weight: bold;
+}
+
+.top-header a,
+.top-header a:visited {
+    color: #000;
+}
+
+.page-index .top-header {
+    padding: 20px 0;
+}
+
+.page-index .top-header a {
+    font-size: 32pt;
+}
+
+@media print {
+    .top-header {
+        display: none;
+    }
+}
+
+.bottom-footer {
+    padding: 5px;
+    text-align: center;
+    line-height: 150%;
+}
+
+@media screen {
+    .bottom-footer {
+        background-color: #eee;
+    }
+}
+
+/* max-width: 사이트 전체 폭 */
+.whole {
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+.container {
+    padding: 10px;
+    background-color: #fff;
+}
+
+/* ---------- article ---------- */
+
+main {
+    padding: 0 5px;
+    margin: 0 auto;
+}
+
+@media screen {
+    main {
+        max-width: 720px;
+    }
+}
+
+@media print {
+    main {
+        padding: 0 10px;
+    }
+}
+
+main.article header {
+    padding: 10px 0;
+    border-bottom: 2px dashed #ccc;
+}
+
+main.article header .titlebox {
+	line-height: 120%;
+    font-size: 36px;
+}
+
+main.article header a.permalink,
+main.article header a.permalink:visited {
+    font-size: 14pt;
+}
+
+main.article header .info {
+    padding: 5px 0;
+    font-size: 12pt;
+    color: #666;
+}
+
+main.article article {
+    line-height: 150%;
+    font-size: 16px;
+    color: #333;
+}
+
+main.article article img {
+    margin: auto;
+    width: 90%;
+}
+
+main.article article b,
+main.article article strong {
+    color: #000;
+}
+
+main.article article i,
+main.article article em {
+    padding: 2px;
+    border-radius: 3px;
+    font-style: normal;
+}
+
+@media screen {
+    main.article article i,
+    main.article article em {
+        background-color: #fc6;
+        color: #000;
+    }
+    main.article article s,
+    main.article article del {
+        opacity: .8;
+    }
+}
+
+@media print {
+    main.article article i,
+    main.article article em {
+        border: 2px solid #999;
+    }
+}
+
+main.article pre {
+    /*
+    border-radius: 5px;
+    */
+}
+
+main.article h1,
+main.article h2 {
+    /*
+    padding: 10px 0 3px;
+    border-bottom: 1px solid #ccc;
+    */
+    /* 제목이 길거나, 화면이 좁아서 줄이 나뉠 경우 */
+    line-height: 120%;
+}
+
+/*
+main.article h1,
+main.article h2,
+main.article h3,
+main.article h4,
+main.article h5,
+main.article h6 {
+    color: #000;
+}
+*/
+
+/* inline code */
+main.article p > code {
+    /*
+    border-radius: 3px;
+    background-color: #eee;
+    */
+    color: #000;
+}
+
+main.article .hljs,
+main.article .highlight {
+    padding: 10px 0;
+    /*
+    border-radius: 3px;
+    border-left: 3px solid #693;
+    */
+}
+
+main.article .highlight {
+}
+
+main.article .highlight > pre {
+    margin: 0;
+    padding: 0;
+}
+
+main.article .hljs span,
+main.article code,
+main.article code span.token,
+main.article div.highlight pre,
+main.article div.highlight span {
+    font-family:
+        'D2Coding',
+        monospace !important;
+}
+
+main.article article > hr {
+    border-top: 1px solid #ccc;
+}
+
+main.article blockquote {
+    margin: 5px 0;
+    border-left: 5px solid #ccc;
+    /*
+     * 2016-11-24: 첫 부분에서 쓰면 TOC와 겹침
+    background-color: #eee;
+    */
+}
+
+main.article blockquote > p {
+    padding: 10px;
+}
+
+main.article footer {
+    padding: 10px 0;
+    /* border-top: 2px dashed #ccc; */
+}
+
+#TableOfContents {
+    padding: 5px 20px;
+    margin: 10px 0 10px 10px;
+    min-width: 200px;
+    border-left: 2px solid #ccc;
+}
+
+#TableOfContents ul {
+    margin: 0;
+    padding-left: 20px;
+    line-height: 200%;
+}
+
+main.article .footnotes hr {
+    border-top: 1px dashed #ccc;
+}
+
+@media screen and (min-width: 600px) {
+    #TableOfContents {
+        float: right;
+    }
+    #TableOfContents ul {
+        line-height: 150%;
+    }
+}
+
+main.article .mermaid {
+    margin: 10px 0;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* ---------- index ---------- */
+
+.area {
+    margin-bottom: 20px;
+}
+
+.area-label {
+    padding: 3px 0;
+    border-bottom: 1px solid #ccc;
+    font-size: larger;
+}
+
+.article-item,
+.tag-list .tag {
+    background-color: #fff;
+}
+
+.article-item {
+    margin: 10px 0;
+    padding: 5px 10px;
+}
+
+.article-item .title {
+    display: block;
+    margin: 5px 0;
+    font-size: 16pt;
+}
+
+.article-item .description {
+    font-size: 12pt;
+    color: #666;
+}
+
+.article-item .info {
+    color: #666;
+}
+
+.page-index .tag-list {
+    margin: 10px 5px;
+}
+
+.tag-list .tag {
+    display: inline-block;
+    padding: 2px;
+    margin: 3px 0;
+    font-size: 14pt;
+}
+
+.tag-list .tag:not(:last-of-type) {
+    margin-right: 5px;
+}
+
+.tag-list .tag-flat:before,
+.tag-list .tag:before {
+    content: '#'; /* ＃ */
+}
+
+.tag-list .tag-flat {
+    display: inline-block;
+    padding: 0 3px;
+    margin: 3px 0;
+}
